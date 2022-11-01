@@ -1,0 +1,63 @@
+#register {
+	width: 96.5vw;
+	height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	width: 25rem;
+	padding: 2.5rem 1rem;
+	background: #fff;
+	border: 2px dashed #bbb;
+	border-radius: 5px;
+}
+
+form h4 {
+	text-align: center;
+	color: var(--secondary-color);
+	font-weight: 900 !important;
+}
+
+form span {
+	text-align: center;
+}
+
+form button {
+	width: 12rem;
+}
+
+form label {
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+.form-control {
+	box-shadow: none !important;
+	border: 1px solid #aaa;
+}
+
+.form-control:focus {
+	border: 1px solid #aaa;
+}
+
+.register-link a {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+@media (max-width: 500px) {
+	body {
+		padding: 0.8rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	form {
+		width: 100%;
+	}
+	form button {
+		width: 100%;
+	}
+}

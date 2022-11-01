@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ResumeUp - Free Resume Builder</title>
+		<!-- stylesheets  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+			integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./src/css/extra.css" />
+		<link rel="stylesheet" href="./src/css/resume.css" />
+		<!-- scripts  -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="./vendors/js/bootstrap.min.js" defer></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+			integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="./src/js/resume.js" defer></script>
+	</head>
+	<body>
+		<section id="download">
+			<button class="btn-red" id="btn-download">
+				Download PDF <i class="bi bi-file-earmark-pdf-fill"></i>
+			</button>
+			&nbsp;
+			<button class="btn-red" id="btn-edit">
+				Edit Theme <i class="bi bi-pencil-fill"></i>
+			</button>
+			&nbsp;
+			<button class="btn-red" id="btn-logout">
+				Logout <i class="bi bi-power"></i>
+			</button>
+		</section>
+		<section id="edit-box" class="d-none mt-4">
+			<div class="color-box" name="teal"></div>
+			<div class="color-box" name="blue"></div>
+			<div class="color-box" name="pink"></div>
+			<div class="color-box" name="yellow"></div>
+			<div class="color-box" name="green"></div>
+			<div class="color-box" name="default"></div>
+		</section>
+		<section id="resume" class="img-fluid mt-4">
+			<div class="edit-resume-data"><i class="bi bi-pencil-fill"></i></div>
+			<section id="left-resume">
+				<div class="candidate-details">
+					<div class="candidate-image">
+						<img
+							src="./resources/images/user.jpg"
+							class="candidate-img img-fluid"
+						/>
+					</div>
+					<div class="candidate-profile">
+						<h6 class="candidate-heading-dark">PROFILE</h6>
+						<p class="candidate-description">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+							omnis cupiditate mollitia sunt consequatur officia minus?
+							Voluptatum libero omnis sed.
+						</p>
+					</div>
+					<div class="candidate-contact mt-4">
+						<h6 class="candidate-heading-dark">CONTACTS</h6>
+						<a href="tel:9080800692"
+							><p class="candidate-phone">+(91) 9080800692</p></a
+						>
+						<a class="d-block mt-1" href="mailto:aravindhandev37@gmail.com"
+							><p class="candidate-email">aravindhandev37@gmail.com</p></a
+						>
+						<a
+							class="candidate-website d-block mt-1"
+							href="https://aravindhan-portfolio.netlify.app/"
+							target="_blank"
+							><p><i class="bi bi-globe"></i> Website</p></a
+						>
+						<a
+							class="candidate-linkedin d-block mt-1"
+							href="https://aravindhan-portfolio.netlify.app/"
+							target="_blank"
+							><p><i class="bi bi-linkedin"></i> LinkedIn</p></a
+						>
+						<a
+							class="candidate-github d-block mt-1"
+							href="https://aravindhan-portfolio.netlify.app/"
+							target="_blank"
+							><p><i class="bi bi-github"></i> Github</p></a
+						>
+					</div>
+					<div class="candidate-skills mt-4">
+						<h6 class="candidate-heading-dark">SKILLS</h6>
+						<ul class="candidate-skill-list">
+							<li>CSS</li>
+							<li>Networking</li>
+							<li>JS</li>
+							<li>Data Analysis</li>
+						</ul>
+					</div>
+					<div class="candidate-skills mt-4">
+						<h6 class="candidate-heading-dark">EXPERTISE</h6>
+						<ul class="candidate-expertise-list">
+							<li>Collaboration</li>
+							<li>Python</li>
+							<li>React.js</li>
+							<li>Angular</li>
+							<li>MongoDB</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="right-resume">
+				<div class="candidate-name">
+					<h3 class="candidate-heading">ARAVINDHAN G</h3>
+					<p class="candidate-major">Computer Science Major</p>
+				</div>
+				<div class="candidate-educations mt-5">
+					<h6 class="candidate-heading">EDUCATION</h6>
+					<div class="candidate-education">
+						<p>College of Engineering, Guindy 2022-2024</p>
+						<p>Masters in Computer Application</p>
+						<p>GPA: 9.8</p>
+					</div>
+					<div class="candidate-education mt-4">
+						<p>College of Engineering, Guindy 2022-2024</p>
+						<p>Masters in Computer Application</p>
+						<p>GPA: 9.8</p>
+					</div>
+					<div class="candidate-education mt-4">
+						<p>College of Engineering, Guindy 2022-2024</p>
+						<p>Masters in Computer Application</p>
+						<p>GPA: 9.8</p>
+					</div>
+				</div>
+				<div class="candidate-projects" style="margin-top: 2.2rem">
+					<h6 class="candidate-heading">PROJECTS</h6>
+					<div class="candidate-project mt-2">
+						<p>Qxcel - The SkillTest Platform | 2022-2022</p>
+						<a target="_blank" href="https://qxcel.herokuapp.com"
+							>https://qxcel.herokuapp.com/</a
+						>
+					</div>
+					<div class="candidate-project mt-4">
+						<p>DBDocs - File System Simulation | 2022-2022</p>
+						<a target="_blank" href="https://dbdocs.netlify.app"
+							>https://qxcel.herokuapp.com/</a
+						>
+					</div>
+				</div>
+				<div class="candidate-employment" style="margin-top: 2.2rem">
+					<h6 class="candidate-heading">EMPLOYMENT</h6>
+					<p>Web Developer (Internship) || 2022-2022</p>
+					<p>Quess Corporation, Chennai, TamilNadu</p>
+					<p>Best job ever.</p>
+				</div>
+				<div class="candidate-interests" style="margin-top: 2.2rem">
+					<h6 class="candidate-heading">INTERESTS</h6>
+					<ol class="candidate-interest-list">
+						<li>Swimming</li>
+						<li>Essay Writing</li>
+						<li>Racing</li>
+					</ol>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>

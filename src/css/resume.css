@@ -1,0 +1,219 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 900 !important;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	background: #fafafa;
+}
+
+.edit-resume-data {
+	position: absolute;
+	right: 3%;
+	border-radius: 50%;
+	width: 1.8rem;
+	height: 1.8rem;
+	cursor: pointer;
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.edit-resume-data:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#resume {
+	box-shadow: 3px 3px 10px rgba(44, 44, 44, 0.1),
+		-3px -3px 10px rgba(44, 44, 44, 0.1);
+	max-width: 48rem;
+	position: relative;
+	min-width: 48rem;
+	height: 65rem;
+	background: #fcfcfc;
+	border: 2px dashed #bcbcbc;
+	display: flex;
+	padding: 1rem 0;
+	font-size: 1.1rem;
+}
+
+#edit-box {
+	background: #fff;
+	width: 48rem;
+	border: 2px dashed #ddd;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.color-box {
+	width: 80px;
+	height: 30px;
+	background: #000;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.color-box:nth-child(1) {
+	background: #319da0;
+}
+
+.color-box:nth-child(2) {
+	background: #5837d0;
+}
+
+.color-box:nth-child(3) {
+	background: #ea047e;
+}
+
+.color-box:nth-child(4) {
+	background: #fbdf07;
+}
+
+.color-box:nth-child(5) {
+	background: #3ccf4e;
+}
+
+.color-box:nth-child(6) {
+	background: #ff4a4a;
+}
+
+.candidate-img {
+	background: var(--secondary-opac-color);
+	border: 5px solid #fff;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#right-resume {
+	padding: 1rem;
+	padding-top: 2rem;
+	width: 60%;
+}
+
+.candidate-name h3 {
+	margin-bottom: 0;
+}
+
+.candidate-education p,
+.candidate-project p,
+.candidate-employment p,
+.candidate-internship p {
+	margin-bottom: 0;
+	color: #555;
+}
+
+.candidate-heading {
+	color: var(--secondary-color);
+}
+
+.candidate-heading-dark {
+	color: #121212;
+}
+
+.candidate-project p:first-of-type {
+	color: #121212;
+	font-weight: 600;
+}
+
+.candidate-employment p:first-of-type {
+	color: #121212;
+	font-weight: 600;
+}
+
+.candidate-education p:first-of-type {
+	color: #121212;
+	font-weight: 600;
+}
+
+#left-resume {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 6rem;
+	position: relative;
+	font-size: 1rem;
+}
+
+#left-resume p,
+#left-resume ul {
+	color: #f6fbf4;
+}
+
+.candidate-details {
+	background: var(--secondary-opac-color);
+	width: 80%;
+	height: 100%;
+	padding-top: 11rem !important;
+	padding: 1rem;
+}
+
+.candidate-details div p {
+	margin-bottom: 0;
+}
+
+.candidate-image {
+	width: 16rem;
+	border-radius: 50%;
+	background: var(--secondary-color);
+	height: 16rem;
+	position: absolute;
+	top: 0;
+	left: 8%;
+	padding: 0.7rem;
+}
+
+.candidate-contact {
+	word-wrap: break-word;
+}
+
+.candidate-contact a {
+	text-decoration: none;
+}
+
+@media (max-width: 800px) {
+	#resume {
+		zoom: 90%;
+	}
+}
+
+@media (max-width: 730px) {
+	#resume {
+		zoom: 80%;
+	}
+}
+
+@media (max-width: 650px) {
+	body {
+		zoom: 80%;
+	}
+}
+
+@media (max-width: 650px) {
+	body {
+		zoom: 60%;
+		padding: 1rem 0 !important;
+	}
+	#resume {
+		width: 100vw !important;
+	}
+}
+
+@media (max-width: 400px) {
+	body {
+		padding: 1rem 0 !important;
+	}
+	#resume {
+		zoom: 75%;
+	}
+}

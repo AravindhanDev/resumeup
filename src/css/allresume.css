@@ -1,0 +1,48 @@
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+#all-resumes {
+	padding: 0 1rem;
+	width: 100%;
+	border: 2px dashed #aaa;
+	border-radius: 5px;
+	height: 89vh;
+	display: flex;
+	overflow: scroll;
+	overflow-x: hidden;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.resume {
+	width: 7.5rem;
+	height: 7rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.resume:hover {
+	background: #eaeaea;
+}
+
+.resume img {
+	width: 70px;
+	height: 70px;
+}
+
+.resume p {
+	width: 6.5rem;
+	word-wrap: break-word;
+}
+
+.heading {
+	font-weight: bold;
+	color: #121212;
+}

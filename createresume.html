@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ResumeUp - Free Resume Builder</title>
+		<!-- stylesheets  -->
+		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+			integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./src/css/extra.css" />
+		<link rel="stylesheet" href="./src/css/createresume.css" />
+		<!-- scripts  -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="./vendors/js/bootstrap.min.js" defer></script>
+		<script type="module" src="./src/js/createresume.js" defer></script>
+	</head>
+	<body>
+		<!-- <header class="mt-3">
+		</header> -->
+
+		<section id="create-resume1" class="d-none">
+			<form class="row">
+				<div class="col-lg-12 mt-2 form-group education-heading">
+					<h6>
+						<strong>Personal Information</strong>
+					</h6>
+				</div>
+				<div class="col-md-6 mt-4 form-group">
+					<label for="firstname">FirstName <strong>*</strong></label>
+					<input
+						type="text"
+						id="firstname"
+						class="form-control"
+						placeholder="eg. chuck"
+					/>
+					<div class="form-text d-none">FirstName is mandatory</div>
+				</div>
+				<div class="col-md-6 mt-4 form-group">
+					<label for="lastname">LastName <strong>*</strong></label>
+					<input
+						type="text"
+						id="lastname"
+						placeholder="eg. norris"
+						class="form-control"
+					/>
+					<div class="form-text d-none">LastName is mandatory</div>
+				</div>
+				<div class="col-md-6 mt-4 form-group">
+					<label for="mobile">Mobile <strong>*</strong></label>
+					<input
+						type="number"
+						id="mobile"
+						maxlength="10"
+						placeholder="+(91) 976 080 0692"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Mobile number is mandatory</div>
+				</div>
+				<div class="col-md-6 mt-4 form-group">
+					<label for="email">Email <strong>*</strong></label>
+					<input
+						type="email"
+						id="email"
+						placeholder="acb@xyz.com"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Email is mandatory</div>
+				</div>
+				<div class="col-md-12 mt-4 form-group">
+					<label for="aboutyou">About You <strong>*</strong></label>
+					<textarea
+						class="form-control"
+						id="aboutyou"
+						placeholder="must not exceed 200 words"
+					></textarea>
+					<div class="form-text d-none">
+						It's mandatory to describe yourself shortly
+					</div>
+				</div>
+				<div class="col-md-6 mt-4 form-group">
+					<label for="linkedin">LinkedIn Profile</label>
+					<input
+						type="text"
+						id="linkedin"
+						placeholder="https://linkedin.com/in/aravindhan-g-58b886216/"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Not a valid URL</div>
+				</div>
+				<div class="col-md-6 mt-4 form-group">
+					<label for="github">Github Profile</label>
+					<input
+						type="text"
+						id="github"
+						placeholder="https://github.com/NoobieUs37"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Not a valid URL</div>
+				</div>
+				<div class="col-md-12 mt-4 form-group">
+					<label for="website">Website</label>
+					<input
+						type="text"
+						id="website"
+						placeholder="https://aravindhan-portfolio.netfliy.app/"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Not a valid URL</div>
+				</div>
+				<div class="col-md-12 mt-4 form-group">
+					<button type="button" id="btn1Next" class="btn-red">
+						Next <i class="bi bi-arrow-right"></i>
+					</button>
+				</div>
+			</form>
+		</section>
+
+		<section id="create-resume2" class="d-none">
+			<form class="row">
+				<div class="col-lg-12 mt-2 form-group education-heading">
+					<h6>
+						<strong>SSLC - Education</strong>
+					</h6>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="sslcSchoolName">School Name <strong>*</strong></label>
+					<input
+						class="form-control"
+						type="text"
+						placeholder="eg. Sacred Heart"
+						id="sslcSchoolName"
+					/>
+					<div class="form-text d-none">School Name is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="sslcPercentage">Percentage <strong>*</strong></label>
+					<input
+						class="form-control"
+						type="number"
+						placeholder="eg. 97.56"
+						id="sslcPercentage"
+					/>
+					<div class="form-text d-none">Percentage is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="sslcStartYear">Start year <strong>*</strong></label>
+					<select id="sslcStartYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="sslcEndYear">End year <strong>*</strong></label>
+					<select id="sslcEndYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+					<div class="form-text d-none">
+						End year can't be earlier than start
+					</div>
+				</div>
+				<div class="col-lg-12 mt-5 form-group education-heading">
+					<h6>
+						<strong>HSC - Education</strong>
+					</h6>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="hscSchoolName">School Name <strong>*</strong></label>
+					<input
+						class="form-control"
+						placeholder="eg. Sacred Heart"
+						type="text"
+						id="hscSchoolName"
+					/>
+					<div class="form-text d-none">School Name is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="hscPercentage">Percentage <strong>*</strong></label>
+					<input
+						class="form-control"
+						placeholder="eg. 97.56"
+						type="number"
+						id="hscPercentage"
+					/>
+					<div class="form-text d-none">Percentage is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="hscStartYear">Start year <strong>*</strong></label>
+					<select id="hscStartYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="hscEndYear">End year <strong>*</strong></label>
+					<select id="hscEndYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+					<div class="form-text d-none">
+						End year can't be earlier than start
+					</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="hscMajor">Major <strong>*</strong></label>
+					<select id="hscMajor" class="form-select">
+						<option selected>Computer Science</option>
+						<option>Biology</option>
+						<option>Accountancy</option>
+						<option>Bio Technology</option>
+						<option>Business Studies</option>
+						<option>Chemistry</option>
+						<option>Economics</option>
+						<option>Geography</option>
+					</select>
+				</div>
+				<div class="col-lg-12 mt-5 form-group education-heading">
+					<h6>
+						<strong>Most Recent Degree</strong>
+					</h6>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="collegeName"
+						>College / University Name <strong>*</strong></label
+					>
+					<input
+						class="form-control"
+						placeholder="eg. SNS Institute of Technology"
+						type="text"
+						id="collegeName"
+					/>
+					<div class="form-text d-none">School Name is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="degreePercentage">Percentage <strong>*</strong></label>
+					<input
+						class="form-control"
+						placeholder="eg. 96.80"
+						type="number"
+						id="degreePercentage"
+					/>
+					<div class="form-text d-none">Percentage is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="degree">Degree <strong>*</strong></label>
+					<select id="degree" class="form-select">
+						<option>Under Graduate</option>
+						<option>Post Graduate</option>
+						<option>PHD</option>
+						<option>Diploma</option>
+					</select>
+					<div class="form-text d-none">Degree is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="degreeMajor">Major <strong>*</strong></label>
+					<select id="degreeMajor" class="form-select">
+						<option>
+							Agriculture, Agriculture Operations, and Related Sciences
+						</option>
+						<option>Architecture and Related Services</option>
+						<option>Area, Ethnic, Cultural, Gender, and Group Studies</option>
+						<option>Aviation</option>
+						<option>Biological and Biomedical Sciences</option>
+						<option>
+							Business, Management, Marketing, and Related Support Services
+						</option>
+						<option>Communication, Journalism, and Related Programs</option>
+						<option>
+							Communications Technologies/technicians and Support Services
+						</option>
+						<option>
+							Computer and Information Sciences and Support Services
+						</option>
+						<option selected>Computer Applications</option>
+						<option>Construction Trades</option>
+						<option>Education</option>
+						<option>
+							Engineering Technologies and Engineering-Related Fields
+						</option>
+						<option>Engineering</option>
+						<option>English Language and Literature/letters</option>
+						<option>Family and Consumer Sciences/human Sciences</option>
+						<option>Foreign Languages, Literatures, and Linguistics</option>
+						<option>Health Professions and Related Programs</option>
+						<option>History</option>
+						<option>Homeland Security, Law Enforcement, Firefighting</option>
+						<option>Human Services</option>
+						<option>Legal Professions and Studies</option>
+						<option>Liberal Arts and Sciences Studies and Humanities</option>
+						<option>Library Science</option>
+						<option>Mathematics and Statistics</option>
+						<option>Mechanic and Repair Technologies/technicians</option>
+						<option>Military Technologies and Applied Sciences</option>
+						<option>Multi/interdisciplinary Studies</option>
+						<option>Natural Resources and Conservation</option>
+						<option>Parks, Recreation, Leisure, and Fitness Studies</option>
+						<option>Personal and Culinary Services</option>
+						<option>Philosophy and Religious Studies</option>
+						<option>Physical Sciences</option>
+						<option>Precision Production</option>
+						<option>Psychology</option>
+						<option>Science Technologies/technicians</option>
+						<option>Social Sciences</option>
+						<option>Theology and Religious Vocations</option>
+						<option>Transportation and Materials Moving</option>
+						<option>Visual and Performing Arts</option>
+					</select>
+					<div class="form-text d-none">Major is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="degreeStartYear">Start Year <strong>*</strong></label>
+					<select id="degreeStartYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+					<div class="form-text d-none">Start Month is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="degreeEndYear">End Year <strong>*</strong></label>
+					<select id="degreeEndYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+					<div class="form-text d-none">
+						End year can't be earlier than start
+					</div>
+				</div>
+			</form>
+			<form>
+				<button type="button" id="btn2Prev" class="btn-red">
+					<i class="bi bi-arrow-left"></i> Prev
+				</button>
+				<button type="button" id="btn2Next" class="btn-red">
+					Next <i class="bi bi-arrow-right"></i>
+				</button>
+			</form>
+		</section>
+
+		<section id="create-resume3" class="d-none">
+			<form class="row">
+				<div class="col-lg-12 mt-2 form-group education-heading">
+					<h6>
+						<strong>Project Details</strong>
+					</h6>
+					<p class="mt-2 mb-0" style="color: #777">Atmost 2 projects</p>
+				</div>
+				<div class="form-group mt-3 col-md-3">
+					<label for="projectName">Name <strong>*</strong></label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="eg. Qxcel"
+						id="projectName"
+					/>
+					<div class="form-text d-none">Project name is mandatory</div>
+				</div>
+				<div class="form-group mt-3 col-md-4">
+					<label for="projectDate">Date of completion <strong>*</strong></label>
+					<input
+						type="date"
+						class="form-control"
+						placeholder="eg. "
+						id="projectDate"
+					/>
+					<div class="form-text d-none">Completion date is mandatory</div>
+				</div>
+				<div class="form-group mt-3 col-md-5">
+					<label for="projectUrl">Project URL <strong>*</strong></label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="eg. https://qxcel.herokuapp.com"
+						id="projectUrl"
+					/>
+					<div class="form-text d-none">Completion date is mandatory</div>
+				</div>
+			</form>
+			<div class="projectData row"></div>
+			<div class="row">
+				<div class="col-md-12 mt-4 form-group">
+					<button type="button" id="btn3Prev" class="btn-red">
+						<i class="bi bi-arrow-left"></i> Prev
+					</button>
+					<button type="button" id="btn3Next" class="btn-red">
+						Next <i class="bi bi-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="create-resume4" class="d-none">
+			<form class="row">
+				<div class="col-lg-12 mt-2 form-group education-heading">
+					<h6>
+						<strong>Skills && Expertise</strong>
+					</h6>
+					<p class="mt-2 mb-0" style="color: #777">
+						Atmost 5 Skills || Expertise
+					</p>
+				</div>
+				<div class="form-group col-lg-12">
+					<label for="skills">Select your Skills <strong>*</strong></label>
+					<select id="skills" class="form-select">
+						<option selected disabled>Choose your skills</option>
+						<option>JavaScript</option>
+						<option>TypeScript</option>
+						<option>Python</option>
+						<option>Java</option>
+						<option>Swift</option>
+						<option>C++</option>
+						<option>C#</option>
+						<option>R</option>
+						<option>Golang (Go)</option>
+						<option>C</option>
+						<option>Mysql</option>
+						<option>MongoDB</option>
+						<option>React.js</option>
+						<option>Node.js</option>
+						<option>Angular</option>
+						<option>Vue.js</option>
+						<option>Svelte</option>
+						<option>Rust</option>
+						<option>Express.js</option>
+						<option>PHP</option>
+						<option>Laravel</option>
+						<option>Bootstrap</option>
+						<option>Tailwind</option>
+						<option>jQuery</option>
+						<option>Bottle</option>
+						<option>Flask</option>
+						<option>Django</option>
+						<option>Web2py</option>
+						<option>AIOHTTP</option>
+						<option>CherryPy</option>
+						<option>Dash</option>
+						<option>Falcon</option>
+						<option>Growler</option>
+						<option>UvLoop</option>
+						<option>Pyramid</option>
+						<option>Sanic</option>
+						<option>CubicWeb</option>
+						<option>TurboGears</option>
+						<option>Hug</option>
+						<option>MorePath</option>
+						<option>Next.js</option>
+						<option>Three.js</option>
+						<option>Ember.js</option>
+						<option>Meteor.js</option>
+						<option>Backbone.js</option>
+						<option>Spring Boot</option>
+						<option>Jest</option>
+						<option>Dino</option>
+						<option>Gatsby Js</option>
+						<option>React Native</option>
+						<option>Flutter</option>
+						<option>Dart</option>
+						<option>Blockchain</option>
+						<option>Solidity</option>
+						<option>Electron</option>
+						<option>Linux</option>
+						<option>Microsoft Word</option>
+						<option>Microsoft Excel</option>
+						<option>Microsoft Powerpoint</option>
+						<option>Firebase</option>
+						<option>Time management</option>
+						<option>Effective communication</option>
+						<option>Emotional intelligence</option>
+						<option>Conflict management</option>
+						<option>Teamwork skills</option>
+						<option>Stress management</option>
+						<option>Problem-solving</option>
+						<option>Productivity & organization</option>
+						<option>Critical thinking</option>
+						<option>Attention to detail</option>
+						<option>Adaptability</option>
+						<option>Data analysis</option>
+						<option>Web analytics</option>
+						<option>SEO/SEM</option>
+						<option>HTML & CSS</option>
+						<option>Wordpress</option>
+						<option>Email marketing</option>
+						<option>Web scraping</option>
+						<option>CRO and A/B Testing</option>
+						<option>
+							Data visualization & pattern-finding through critical thinking
+						</option>
+						<option>Search Engine and Keyword Optimization</option>
+						<option>Project/campaign management</option>
+						<option>Social media and mobile marketing</option>
+						<option>Paid social media advertisements</option>
+						<option>B2B Marketing</option>
+						<option>The 4 P-s of Marketing</option>
+						<option>Consumer Behavior Drivers</option>
+						<option>Brand management</option>
+						<option>Creativity</option>
+						<option>Copywriting</option>
+						<option>Storytelling</option>
+						<option>Sales</option>
+						<option>CMS Tools</option>
+						<option>Six Sigma techniques</option>
+						<option>The McKinsey 7s Framework</option>
+						<option>Porter’s Five Forces</option>
+						<option>PESTEL</option>
+						<option>Emotional Intelligence</option>
+						<option>Dealing with work-related stress</option>
+						<option>Motivation</option>
+						<option>Task delegation</option>
+						<option>Technological savviness</option>
+						<option>People management</option>
+						<option>Business Development</option>
+						<option>Strategic Management</option>
+						<option>Negotiation</option>
+						<option>Planning</option>
+						<option>Proposal writing</option>
+						<option>Problem-solving</option>
+						<option>Innovation</option>
+						<option>Charisma</option>
+						<option>Customer Relationship Management (CRM)</option>
+						<option>Cold-calling</option>
+						<option>Negotiation</option>
+						<option>Public speaking</option>
+						<option>Closing</option>
+						<option>Lead generation</option>
+						<option>Buyer-Responsive selling</option>
+						<option>Buyer engagement</option>
+						<option>Product knowledge</option>
+						<option>Persuasion</option>
+						<option>Effective communication and sociability</option>
+						<option>Empathy</option>
+						<option>Social media/digital communication</option>
+						<option>Teamwork</option>
+						<option>Time management</option>
+						<option>
+							Adobe Creative Suite: Illustrator, InDesign, Photoshop
+						</option>
+						<option>Dreamweaver</option>
+						<option>Infographics</option>
+						<option>HTML & CSS</option>
+						<option>Photo editing</option>
+						<option>
+							Typography: spacing, line height, layout, choosing fonts
+						</option>
+						<option>Storyboarding</option>
+						<option>
+							Targeting and marketing through visual communications
+						</option>
+						<option>Logo creation</option>
+						<option>Digital printing</option>
+						<option>
+							Integration of visual communication in social media platforms
+						</option>
+						<option>Creativity</option>
+						<option>Attention to detail & aesthetics</option>
+						<option>Interactive media design</option>
+						<option>Color sense & theory</option>
+						<option>Ad design</option>
+						<option>Active listening</option>
+						<option>
+							Microsoft Office Pack: Word, Excel, Access, Publisher, Outlook,
+							Powerpoint
+						</option>
+						<option>Filing and paper management</option>
+						<option>Data entry</option>
+						<option>Bookkeeping through Excel or TurboTax</option>
+						<option>Research and data analysis</option>
+						<option>Basic knowledge of user interface communication</option>
+						<option>Technical writing</option>
+						<option>Cloud networking and file sharing</option>
+						<option>Microsoft Excel (Advanced)</option>
+						<option>Enterprise Resource Planning</option>
+						<option>Big Data Analysis & SQL</option>
+						<option>Know Your Customers (KYC)</option>
+						<option>Cognos Analytics (IBM)</option>
+						<option>Visual Basic</option>
+						<option>Accounting Software</option>
+						<option>Revenue recognition</option>
+						<option>Anti Money Laundering</option>
+						<option>Clear communication</option>
+						<option>General business knowledge</option>
+						<option>Numerical competence</option>
+						<option>Accuracy</option>
+						<option>Attention to detail</option>
+						<option>HTML/CSS</option>
+						<option>CSS preprocessors</option>
+						<option>Javascript</option>
+						<option>Wordpress</option>
+						<option>Graphic User Interfaces (GUI)</option>
+						<option>Git/Version control (Github, gitlab)</option>
+						<option>Search Engine Optimization (SEO)</option>
+						<option>Application Programming Interface (API)</option>
+						<option>Adobe Photoshop, InDesign</option>
+						<option>Content Management Systems (CMS)</option>
+						<option>Testing/Debugging</option>
+						<option>Responsive design principles</option>
+						<option>SQL (a must) and Hive (optional)</option>
+						<option>Programming language (R, Python, Scala, Matlab)</option>
+						<option>STATA, SPSS, SAS</option>
+						<option>Data Mapping</option>
+						<option>Entity Relationship Diagrams</option>
+						<option>Wireframes</option>
+						<option>Big Data tools</option>
+						<option>Microsoft Visio</option>
+						<option>Agile Business Analysis</option>
+						<option>Machine learning</option>
+						<option>System Context Diagrams</option>
+						<option>Business Process Modeling</option>
+						<option>Technical and non-technical communication</option>
+						<option>Mathematics</option>
+						<option>CPR</option>
+						<option>Patient care and assistance</option>
+						<option>Paperwork/record-keeping abilities</option>
+						<option>Compassion</option>
+						<option>Advanced Cardiac Life Support (ACLS)</option>
+						<option>Telemetry</option>
+						<option>Attention to detail</option>
+						<option>Physical endurance</option>
+						<option>Acute care</option>
+						<option>Infection control</option>
+						<option>Surgery preparation</option>
+					</select>
+					<div class="form-text d-none">Please select your skills</div>
+				</div>
+
+				<div class="skills-data mt-3"></div>
+
+				<div class="form-group mt-5 col-lg-12">
+					<label for="expertise"
+						>Select your Expertise <strong>*</strong></label
+					>
+					<select id="expertise" class="form-select">
+						<option selected disabled>Choose your expertise</option>
+						<option>JavaScript</option>
+						<option>TypeScript</option>
+						<option>Python</option>
+						<option>Java</option>
+						<option>Swift</option>
+						<option>C++</option>
+						<option>C#</option>
+						<option>R</option>
+						<option>Golang (Go)</option>
+						<option>C</option>
+						<option>Mysql</option>
+						<option>MongoDB</option>
+						<option>React.js</option>
+						<option>Node.js</option>
+						<option>Angular</option>
+						<option>Vue.js</option>
+						<option>Svelte</option>
+						<option>Rust</option>
+						<option>Express.js</option>
+						<option>PHP</option>
+						<option>Laravel</option>
+						<option>Bootstrap</option>
+						<option>Tailwind</option>
+						<option>jQuery</option>
+						<option>Bottle</option>
+						<option>Flask</option>
+						<option>Django</option>
+						<option>Web2py</option>
+						<option>AIOHTTP</option>
+						<option>CherryPy</option>
+						<option>Dash</option>
+						<option>Falcon</option>
+						<option>Growler</option>
+						<option>UvLoop</option>
+						<option>Pyramid</option>
+						<option>Sanic</option>
+						<option>CubicWeb</option>
+						<option>TurboGears</option>
+						<option>Hug</option>
+						<option>MorePath</option>
+						<option>Next.js</option>
+						<option>Three.js</option>
+						<option>Ember.js</option>
+						<option>Meteor.js</option>
+						<option>Backbone.js</option>
+						<option>Spring Boot</option>
+						<option>Jest</option>
+						<option>Dino</option>
+						<option>Gatsby Js</option>
+						<option>React Native</option>
+						<option>Flutter</option>
+						<option>Dart</option>
+						<option>Blockchain</option>
+						<option>Solidity</option>
+						<option>Electron</option>
+						<option>Linux</option>
+						<option>Microsoft Word</option>
+						<option>Microsoft Excel</option>
+						<option>Microsoft Powerpoint</option>
+						<option>Time management</option>
+						<option>Effective communication</option>
+						<option>Emotional intelligence</option>
+						<option>Conflict management</option>
+						<option>Teamwork skills</option>
+						<option>Stress management</option>
+						<option>Problem-solving</option>
+						<option>Productivity & organization</option>
+						<option>Critical thinking</option>
+						<option>Attention to detail</option>
+						<option>Adaptability</option>
+						<option>Data analysis</option>
+						<option>Web analytics</option>
+						<option>SEO/SEM</option>
+						<option>HTML & CSS</option>
+						<option>Wordpress</option>
+						<option>Email marketing</option>
+						<option>Web scraping</option>
+						<option>CRO and A/B Testing</option>
+						<option>
+							Data visualization & pattern-finding through critical thinking
+						</option>
+						<option>Search Engine and Keyword Optimization</option>
+						<option>Project/campaign management</option>
+						<option>Social media and mobile marketing</option>
+						<option>Paid social media advertisements</option>
+						<option>B2B Marketing</option>
+						<option>The 4 P-s of Marketing</option>
+						<option>Consumer Behavior Drivers</option>
+						<option>Brand management</option>
+						<option>Creativity</option>
+						<option>Copywriting</option>
+						<option>Storytelling</option>
+						<option>Sales</option>
+						<option>CMS Tools</option>
+						<option>Six Sigma techniques</option>
+						<option>The McKinsey 7s Framework</option>
+						<option>Porter’s Five Forces</option>
+						<option>PESTEL</option>
+						<option>Emotional Intelligence</option>
+						<option>Dealing with work-related stress</option>
+						<option>Motivation</option>
+						<option>Task delegation</option>
+						<option>Technological savviness</option>
+						<option>People management</option>
+						<option>Business Development</option>
+						<option>Strategic Management</option>
+						<option>Negotiation</option>
+						<option>Planning</option>
+						<option>Proposal writing</option>
+						<option>Problem-solving</option>
+						<option>Innovation</option>
+						<option>Charisma</option>
+						<option>Customer Relationship Management (CRM)</option>
+						<option>Cold-calling</option>
+						<option>Negotiation</option>
+						<option>Public speaking</option>
+						<option>Closing</option>
+						<option>Lead generation</option>
+						<option>Buyer-Responsive selling</option>
+						<option>Buyer engagement</option>
+						<option>Product knowledge</option>
+						<option>Persuasion</option>
+						<option>Effective communication and sociability</option>
+						<option>Empathy</option>
+						<option>Social media/digital communication</option>
+						<option>Teamwork</option>
+						<option>Time management</option>
+						<option>
+							Adobe Creative Suite: Illustrator, InDesign, Photoshop
+						</option>
+						<option>Dreamweaver</option>
+						<option>Infographics</option>
+						<option>HTML & CSS</option>
+						<option>Photo editing</option>
+						<option>
+							Typography: spacing, line height, layout, choosing fonts
+						</option>
+						<option>Storyboarding</option>
+						<option>
+							Targeting and marketing through visual communications
+						</option>
+						<option>Logo creation</option>
+						<option>Digital printing</option>
+						<option>
+							Integration of visual communication in social media platforms
+						</option>
+						<option>Creativity</option>
+						<option>Attention to detail & aesthetics</option>
+						<option>Interactive media design</option>
+						<option>Color sense & theory</option>
+						<option>Ad design</option>
+						<option>Active listening</option>
+						<option>
+							Microsoft Office Pack: Word, Excel, Access, Publisher, Outlook,
+							Powerpoint
+						</option>
+						<option>Filing and paper management</option>
+						<option>Data entry</option>
+						<option>Bookkeeping through Excel or TurboTax</option>
+						<option>Research and data analysis</option>
+						<option>Basic knowledge of user interface communication</option>
+						<option>Technical writing</option>
+						<option>Cloud networking and file sharing</option>
+						<option>Microsoft Excel (Advanced)</option>
+						<option>Enterprise Resource Planning</option>
+						<option>Big Data Analysis & SQL</option>
+						<option>Know Your Customers (KYC)</option>
+						<option>Cognos Analytics (IBM)</option>
+						<option>Visual Basic</option>
+						<option>Accounting Software</option>
+						<option>Revenue recognition</option>
+						<option>Anti Money Laundering</option>
+						<option>Clear communication</option>
+						<option>General business knowledge</option>
+						<option>Numerical competence</option>
+						<option>Accuracy</option>
+						<option>Attention to detail</option>
+						<option>HTML/CSS</option>
+						<option>CSS preprocessors</option>
+						<option>Javascript</option>
+						<option>Wordpress</option>
+						<option>Graphic User Interfaces (GUI)</option>
+						<option>Git/Version control (Github, gitlab)</option>
+						<option>Search Engine Optimization (SEO)</option>
+						<option>Application Programming Interface (API)</option>
+						<option>Adobe Photoshop, InDesign</option>
+						<option>Content Management Systems (CMS)</option>
+						<option>Testing/Debugging</option>
+						<option>Responsive design principles</option>
+						<option>SQL (a must) and Hive (optional)</option>
+						<option>Programming language (R, Python, Scala, Matlab)</option>
+						<option>STATA, SPSS, SAS</option>
+						<option>Data Mapping</option>
+						<option>Entity Relationship Diagrams</option>
+						<option>Wireframes</option>
+						<option>Big Data tools</option>
+						<option>Microsoft Visio</option>
+						<option>Agile Business Analysis</option>
+						<option>Machine learning</option>
+						<option>System Context Diagrams</option>
+						<option>Business Process Modeling</option>
+						<option>Technical and non-technical communication</option>
+						<option>Mathematics</option>
+						<option>CPR</option>
+						<option>Patient care and assistance</option>
+						<option>Paperwork/record-keeping abilities</option>
+						<option>Compassion</option>
+						<option>Advanced Cardiac Life Support (ACLS)</option>
+						<option>Telemetry</option>
+						<option>Attention to detail</option>
+						<option>Physical endurance</option>
+						<option>Acute care</option>
+						<option>Infection control</option>
+						<option>Surgery preparation</option>
+					</select>
+					<div class="form-text d-none">Please select your expertise</div>
+				</div>
+
+				<div class="expertise-data mt-3"></div>
+
+				<div class="col-md-12 mt-4 form-group">
+					<button type="button" id="btn4Prev" class="btn-red">
+						<i class="bi bi-arrow-left"></i> Prev
+					</button>
+					<button type="button" id="btn4Next" class="btn-red">
+						Next <i class="bi bi-arrow-right"></i>
+					</button>
+				</div>
+			</form>
+		</section>
+
+		<section id="create-resume5" class="d-none">
+			<form class="row">
+				<div class="col-lg-12 mt-2 form-group education-heading">
+					<h6>
+						<strong>Add Employment</strong>
+					</h6>
+				</div>
+				<div class="mt-3 skip-now text-center">
+					<p class="skip">skip now</p>
+				</div>
+				<div class="form-group mt-4 col-lg-6">
+					<label for="jobTitle">Title</label>
+					<input
+						type="text"
+						placeholder="eg. Data Scientist"
+						id="jobTitle"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Job Title is mandatory</div>
+				</div>
+				<div class="form-group mt-4 col-lg-6">
+					<label for="companyName">Company name <strong>*</strong></label>
+					<input
+						type="text"
+						placeholder="eg. Quess Corporation"
+						id="companyName"
+						class="form-control"
+					/>
+					<div class="form-text d-none">Company name is mandatory</div>
+				</div>
+				<div class="form-group mt-4 col-lg-6">
+					<label for="employmentType">Employment type <strong>*</strong></label>
+					<select id="employmentType" class="form-select">
+						<option value="" selected disabled>Select type</option>
+						<option>Full-time</option>
+						<option>Part-time</option>
+						<option>Self-employed</option>
+						<option>Freelance</option>
+						<option>Internship</option>
+						<option>Trainee</option>
+					</select>
+					<div class="form-text d-none">Employment type is mandatory</div>
+				</div>
+				<div class="form-group mt-4 col-lg-6">
+					<label for="jobLocation">Location <strong>*</strong></label>
+					<select id="jobLocation" class="form-select">
+						<option value="" selected disabled>Select location</option>
+						<option>Chennai, Tamil Nadu</option>
+						<option>Ariyalur, Tamil Nadu</option>
+						<option>Coimbatore, Tamil Nadu</option>
+						<option>Cuddalore, Tamil Nadu</option>
+						<option>Dharmapuri, Tamil Nadu</option>
+						<option>Dindigul, Tamil Nadu</option>
+						<option>Erode, Tamil Nadu</option>
+						<option>Kanchipuram, Tamil Nadu</option>
+						<option>Kanyakumari, Tamil Nadu</option>
+						<option>Karur, Tamil Nadu</option>
+						<option>Krishnagiri, Tamil Nadu</option>
+						<option>Madurai, Tamil Nadu</option>
+						<option>Nagapattinam, Tamil Nadu</option>
+						<option>Namakkal, Tamil Nadu</option>
+						<option>Nilgiris, Tamil Nadu</option>
+						<option>Perambalur, Tamil Nadu</option>
+						<option>Pudukkottai, Tamil Nadu</option>
+						<option>Ramanathapuram, Tamil Nadu</option>
+						<option>Salem, Tamil Nadu</option>
+						<option>Sivaganga, Tamil Nadu</option>
+						<option>Thanjavur, Tamil Nadu</option>
+						<option>Theni, Tamil Nadu</option>
+						<option>Tiruchirappalli, Tamil Nadu</option>
+						<option>Tirunelveli, Tamil Nadu</option>
+						<option>Tiruvallur, Tamil Nadu</option>
+						<option>Tiruvannamalai, Tamil Nadu</option>
+						<option>Tiruvarur, Tamil Nadu</option>
+						<option>Tuticorin, Tamil Nadu</option>
+						<option>Vellore, Tamil Nadu</option>
+						<option>Villupuram, Tamil Nadu</option>
+						<option>Virudhunagar, Tamil Nadu</option>
+						<option>Bagalkot, Karnataka</option>
+						<option>Bangalore, Karnataka</option>
+						<option>Bangalore Rural, Karnataka</option>
+						<option>Belgaum, Karnataka</option>
+						<option>Bellary, Karnataka</option>
+						<option>Bidar, Karnataka</option>
+						<option>Bijapur, Karnataka</option>
+						<option>Chamrajnagar, Karnataka</option>
+						<option>Chickmagalur, Karnataka</option>
+						<option>Chikkaballapur, Karnataka</option>
+						<option>Chitradurga, Karnataka</option>
+						<option>Dakshina Kannada, Karnataka</option>
+						<option>Davangere, Karnataka</option>
+						<option>Dharwad, Karnataka</option>
+						<option>Gadag, Karnataka</option>
+						<option>Gulbarga, Karnataka</option>
+						<option>Hassan, Karnataka</option>
+						<option>Haveri, Karnataka</option>
+						<option>Kodagu, Karnataka</option>
+						<option>Kolar, Karnataka</option>
+						<option>Koppal, Karnataka</option>
+						<option>Mandya, Karnataka</option>
+						<option>Mysore, Karnataka</option>
+						<option>Raichur, Karnataka</option>
+						<option>Ramanagar, Karnataka</option>
+						<option>Shimoga, Karnataka</option>
+						<option>Tumkur, Karnataka</option>
+						<option>Udupi, Karnataka</option>
+						<option>Uttara Kannada, Karnataka</option>
+						<option>Yadgir, Karnataka</option>
+						<option>Alappuzha, Kerala</option>
+						<option>Ernakulam, Kerala</option>
+						<option>Idukki, Kerala</option>
+						<option>Kannur, Kerala</option>
+						<option>Kasargod, Kerala</option>
+						<option>Kollam, Kerala</option>
+						<option>Kottayam, Kerala</option>
+						<option>Kozhikode, Kerala</option>
+						<option>Malappuram, Kerala</option>
+						<option>Palakkad, Kerala</option>
+						<option>Pathanamthitta, Kerala</option>
+						<option>Thiruvananthapuram, Kerala</option>
+						<option>Thrissur, Kerala</option>
+						<option>Wayanad, Kerala</option>
+						<option>Ananthapur, Andhra Pradesh</option>
+						<option>Chittoor, Andhra Pradesh</option>
+						<option>Cuddapah, Andhra Pradesh</option>
+						<option>East, Andhra Pradesh Godavari</option>
+						<option>Guntur, Andhra Pradesh</option>
+						<option>Krishna, Andhra Pradesh</option>
+						<option>Kurnool, Andhra Pradesh</option>
+						<option>Nellore, Andhra Pradesh</option>
+						<option>Prakasam, Andhra Pradesh</option>
+						<option>Srikakulam, Andhra Pradesh</option>
+						<option>Visakhapatnam, Andhra Pradesh</option>
+						<option>Vizianagaram, Andhra Pradesh</option>
+						<option>West Godavari, Andhra Pradesh</option>
+						<option>Nicobar, Andaman Nicobar Islands</option>
+						<option>North And Middle Andaman, Andaman Nicobar Islands</option>
+						<option>South Andaman, Andaman Nicobar Islands</option>
+						<option>Changlang, Arunachal Pradesh</option>
+						<option>Dibang Valley, Arunachal Pradesh</option>
+						<option>East Kameng, Arunachal Pradesh</option>
+						<option>East Siang, Arunachal Pradesh</option>
+						<option>Kurung Kumey, Arunachal Pradesh</option>
+						<option>Lohit, Arunachal Pradesh</option>
+						<option>Lower Dibang Valley, Arunachal Pradesh</option>
+						<option>Lower Subansiri, Arunachal Pradesh</option>
+						<option>Papum Pare, Arunachal Pradesh</option>
+						<option>Tawang, Arunachal Pradesh</option>
+						<option>Tirap, Arunachal Pradesh</option>
+						<option>Upper Siang, Arunachal Pradesh</option>
+						<option>Upper Subansiri, Arunachal Pradesh</option>
+						<option>West Kameng, Arunachal Pradesh</option>
+						<option>West Siang, Arunachal Pradesh</option>
+						<option>Bongaigaon, Assam</option>
+						<option>Barpeta, Assam</option>
+						<option>Cachar, Assam</option>
+						<option>Darrang, Assam</option>
+						<option>Dhemaji, Assam</option>
+						<option>Dhubri, Assam</option>
+						<option>Dibrugarh, Assam</option>
+						<option>Goalpara, Assam</option>
+						<option>Golaghat, Assam</option>
+						<option>Hailakandi, Assam</option>
+						<option>Jorhat, Assam</option>
+						<option>Kamrup, Assam</option>
+						<option>Karbi Anglong, Assam</option>
+						<option>Karimganj, Assam</option>
+						<option>Kokrajhar, Assam</option>
+						<option>Lakhimpur, Assam</option>
+						<option>Marigaon, Assam</option>
+						<option>Nagaon, Assam</option>
+						<option>Nalbari, Assam</option>
+						<option>North Cachar Hills, Assam</option>
+						<option>Sibsagar, Assam</option>
+						<option>Sonitpur, Assam</option>
+						<option>Tinsukia, Assam</option>
+						<option>Araria, Bihar</option>
+						<option>Arwal, Bihar</option>
+						<option>Aurangabad, Bihar</option>
+						<option>Banka, Bihar</option>
+						<option>Begusarai, Bihar</option>
+						<option>Bhagalpur, Bihar</option>
+						<option>Bhojpur, Bihar</option>
+						<option>Buxar, Bihar</option>
+						<option>Darbhanga, Bihar</option>
+						<option>East Champaran</option>
+						<option>Gaya, Bihar</option>
+						<option>Gopalganj, Bihar</option>
+						<option>Jamui, Bihar</option>
+						<option>Jehanabad, Bihar</option>
+						<option>Kaimur (Bhabua), Bihar</option>
+						<option>Katihar, Bihar</option>
+						<option>Khagaria, Bihar</option>
+						<option>Kishanganj, Bihar</option>
+						<option>Lakhisarai, Bihar</option>
+						<option>Madhepura, Bihar</option>
+						<option>Madhubani, Bihar</option>
+						<option>Munger, Bihar</option>
+						<option>Muzaffarpur, Bihar</option>
+						<option>Nalanda, Bihar</option>
+						<option>Nawada, Bihar</option>
+						<option>Patna, Bihar</option>
+						<option>Purnia, Bihar</option>
+						<option>Rohtas, Bihar</option>
+						<option>Saharsa, Bihar</option>
+						<option>Samastipur, Bihar</option>
+						<option>Saran, Bihar</option>
+						<option>Sheikhpura, Bihar</option>
+						<option>Sheohar, Bihar</option>
+						<option>Sitamarhi, Bihar</option>
+						<option>Siwan, Bihar</option>
+						<option>Supaul, Bihar</option>
+						<option>Vaishali, Bihar</option>
+						<option>West Champaran, Bihar</option>
+						<option>Chandigarh, Chandigarh</option>
+						<option>Bastar, Chattisgarh</option>
+						<option>Bijapur, Chattisgarh</option>
+						<option>Bilaspur, Chattisgarh</option>
+						<option>Dantewada, Chattisgarh</option>
+						<option>Dhamtari, Chattisgarh</option>
+						<option>Durg, Chattisgarh</option>
+						<option>Gariaband, Chattisgarh</option>
+						<option>Janjgir-champa, Chattisgarh</option>
+						<option>Jashpur, Chattisgarh</option>
+						<option>Kanker, Chattisgarh</option>
+						<option>Kawardha, Chattisgarh</option>
+						<option>Korba, Chattisgarh</option>
+						<option>Koriya, Chattisgarh</option>
+						<option>Mahasamund, Chattisgarh</option>
+						<option>Narayanpur, Chattisgarh</option>
+						<option>Raigarh, Chattisgarh</option>
+						<option>Raipur, Chattisgarh</option>
+						<option>Rajnandgaon, Chattisgarh</option>
+						<option>Surguja, Chattisgarh</option>
+						<option>Dadra & Nagar Haveli</option>
+						<option>Daman, Daman & Diu</option>
+						<option>Diu, Daman & Diu</option>
+						<option>Central Delhi, Delhi</option>
+						<option>East Delhi, Delhi</option>
+						<option>New Delhi, Delhi</option>
+						<option>North Delhi, Delhi</option>
+						<option>North East Delhi, Delhi</option>
+						<option>North West Delhi, Delhi</option>
+						<option>South Delhi, Delhi</option>
+						<option>South West Delhi, Delhi</option>
+						<option>West Delhi, Delhi</option>
+						<option>North Goa, Goa</option>
+						<option>South Goa, Goa</option>
+						<option>Ahmedabad, Gujarat</option>
+						<option>Amreli, Gujarat</option>
+						<option>Anand, Gujarat</option>
+						<option>Banaskantha, Gujarat</option>
+						<option>Bharuch, Gujarat</option>
+						<option>Bhavnagar, Gujarat</option>
+						<option>Dahod, Gujarat</option>
+						<option>Gandhi Nagar, Gujarat</option>
+						<option>Jamnagar, Gujarat</option>
+						<option>Junagadh, Gujarat</option>
+						<option>Kachchh, Gujarat</option>
+						<option>Kheda, Gujarat</option>
+						<option>Mahesana, Gujarat</option>
+						<option>Narmada, Gujarat</option>
+						<option>Navsari, Gujarat</option>
+						<option>Panch Mahals, Gujarat</option>
+						<option>Patan, Gujarat</option>
+						<option>Porbandar, Gujarat</option>
+						<option>Rajkot, Gujarat</option>
+						<option>Sabarkantha, Gujarat</option>
+						<option>Surat, Gujarat</option>
+						<option>Surendra Nagar</option>
+						<option>Tapi, Gujarat</option>
+						<option>The Dangs, Gujarat</option>
+						<option>Vadodara, Gujarat</option>
+						<option>Valsad, Gujarat</option>
+						<option>Ambala, Haryana</option>
+						<option>Bhiwani, Haryana</option>
+						<option>Faridabad, Haryana</option>
+						<option>Fatehabad, Haryana</option>
+						<option>Gurgaon, Haryana</option>
+						<option>Hisar, Haryana</option>
+						<option>Jhajjar, Haryana</option>
+						<option>Jind, Haryana</option>
+						<option>Kaithal, Haryana</option>
+						<option>Karnal, Haryana</option>
+						<option>Kurukshetra, Haryana</option>
+						<option>Mahendragarh, Haryana</option>
+						<option>Panchkula, Haryana</option>
+						<option>Panipat, Haryana</option>
+						<option>Rewari, Haryana</option>
+						<option>Rohtak, Haryana</option>
+						<option>Sirsa, Haryana</option>
+						<option>Sonipat, Haryana</option>
+						<option>Yamuna Nagar, Haryana</option>
+						<option>Bilaspur, Himachal Pradesh</option>
+						<option>Chamba, Himachal Pradesh</option>
+						<option>Hamirpur, Himachal Pradesh</option>
+						<option>Kangra, Himachal Pradesh</option>
+						<option>Kinnaur, Himachal Pradesh</option>
+						<option>Kullu, Himachal Pradesh</option>
+						<option>Lahul & Spiti, Himachal Pradesh</option>
+						<option>Mandi, Himachal Pradesh</option>
+						<option>Shimla, Himachal Pradesh</option>
+						<option>Sirmaur, Himachal Pradesh</option>
+						<option>Solan, Himachal Pradesh</option>
+						<option>Una, Himachal Pradesh</option>
+						<option>Ananthnag, Jammu & Kashmir</option>
+						<option>Bandipur, Jammu & Kashmir</option>
+						<option>Baramulla, Jammu & Kashmir</option>
+						<option>Budgam, Jammu & Kashmir</option>
+						<option>Doda, Jammu & Kashmir</option>
+						<option>Jammu, Jammu & Kashmir</option>
+						<option>Kargil, Jammu & Kashmir</option>
+						<option>Kathua, Jammu & Kashmir</option>
+						<option>Kulgam, Jammu & Kashmir</option>
+						<option>Kupwara, Jammu & Kashmir</option>
+						<option>Leh, Jammu & Kashmir</option>
+						<option>Poonch, Jammu & Kashmir</option>
+						<option>Pulwama, Jammu & Kashmir</option>
+						<option>Rajauri, Jammu & Kashmir</option>
+						<option>Reasi, Jammu & Kashmir</option>
+						<option>Shopian, Jammu & Kashmir</option>
+						<option>Srinagar, Jammu & Kashmir</option>
+						<option>Udhampur, Jammu & Kashmir</option>
+						<option>Bokaro, Jharkhand</option>
+						<option>Chatra, Jharkhand</option>
+						<option>Deoghar, Jharkhand</option>
+						<option>Dhanbad, Jharkhand</option>
+						<option>Dumka, Jharkhand</option>
+						<option>East Singhbhum, Jharkhand</option>
+						<option>Garhwa, Jharkhand</option>
+						<option>Giridh, Jharkhand</option>
+						<option>Godda, Jharkhand</option>
+						<option>Gumla, Jharkhand</option>
+						<option>Hazaribag, Jharkhand</option>
+						<option>Jamtara, Jharkhand</option>
+						<option>Khunti, Jharkhand</option>
+						<option>Koderma, Jharkhand</option>
+						<option>Latehar, Jharkhand</option>
+						<option>Lohardaga, Jharkhand</option>
+						<option>Pakur, Jharkhand</option>
+						<option>Palamau, Jharkhand</option>
+						<option>Ramgarh, Jharkhand</option>
+						<option>Ranchi, Jharkhand</option>
+						<option>Sahibganj, Jharkhand</option>
+						<option>Seraikela-kharsawan</option>
+						<option>Simdega, Jharkhand</option>
+						<option>West Singhbhum, Jharkhand</option>
+						<option>Lakshadweep, Lakshadweep</option>
+						<option>Alirajpur, Madhya Pradesh</option>
+						<option>Anuppur, Madhya Pradesh</option>
+						<option>Ashok, Madhya Pradesh Nagar</option>
+						<option>Balaghat, Madhya Pradesh</option>
+						<option>Barwani, Madhya Pradesh</option>
+						<option>Betul, Madhya Pradesh</option>
+						<option>Bhind, Madhya Pradesh</option>
+						<option>Bhopal, Madhya Pradesh</option>
+						<option>Burhanpur, Madhya Pradesh</option>
+						<option>Chhatarpur, Madhya Pradesh</option>
+						<option>Chhindwara, Madhya Pradesh</option>
+						<option>Damoh, Madhya Pradesh</option>
+						<option>Datia, Madhya Pradesh</option>
+						<option>Dewas, Madhya Pradesh</option>
+						<option>Dhar, Madhya Pradesh</option>
+						<option>Dindori, Madhya Pradesh</option>
+						<option>East, Madhya Pradesh Nimar</option>
+						<option>Guna, Madhya Pradesh</option>
+						<option>Gwalior, Madhya Pradesh</option>
+						<option>Harda, Madhya Pradesh</option>
+						<option>Hoshangabad, Madhya Pradesh</option>
+						<option>Indore, Madhya Pradesh</option>
+						<option>Jabalpur, Madhya Pradesh</option>
+						<option>Jhabua, Madhya Pradesh</option>
+						<option>Katni, Madhya Pradesh</option>
+						<option>Khandwa, Madhya Pradesh</option>
+						<option>Khargone, Madhya Pradesh</option>
+						<option>Mandla, Madhya Pradesh</option>
+						<option>Mandsaur, Madhya Pradesh</option>
+						<option>Morena, Madhya Pradesh</option>
+						<option>Narsinghpur, Madhya Pradesh</option>
+						<option>Neemuch, Madhya Pradesh</option>
+						<option>Panna, Madhya Pradesh</option>
+						<option>Raisen, Madhya Pradesh</option>
+						<option>Rajgarh, Madhya Pradesh</option>
+						<option>Ratlam, Madhya Pradesh</option>
+						<option>Rewa, Madhya Pradesh</option>
+						<option>Sagar, Madhya Pradesh</option>
+						<option>Satna, Madhya Pradesh</option>
+						<option>Sehore, Madhya Pradesh</option>
+						<option>Seoni, Madhya Pradesh</option>
+						<option>Shahdol, Madhya Pradesh</option>
+						<option>Shajapur, Madhya Pradesh</option>
+						<option>Sheopur, Madhya Pradesh</option>
+						<option>Shivpuri, Madhya Pradesh</option>
+						<option>Sidhi, Madhya Pradesh</option>
+						<option>Singrauli, Madhya Pradesh</option>
+						<option>Tikamgarh, Madhya Pradesh</option>
+						<option>Ujjain, Madhya Pradesh</option>
+						<option>Umaria, Madhya Pradesh</option>
+						<option>Vidisha, Madhya Pradesh</option>
+						<option>West Nimar, Madhya Pradesh</option>
+						<option>Ahmed, Maharashtra Nagar</option>
+						<option>Akola, Maharashtra</option>
+						<option>Amravati, Maharashtra</option>
+						<option>Aurangabad, Maharashtra</option>
+						<option>Beed, Maharashtra</option>
+						<option>Bhandara, Maharashtra</option>
+						<option>Buldhana, Maharashtra</option>
+						<option>Chandrapur, Maharashtra</option>
+						<option>Dhule, Maharashtra</option>
+						<option>Gadchiroli, Maharashtra</option>
+						<option>Gondia, Maharashtra</option>
+						<option>Hingoli, Maharashtra</option>
+						<option>Jalgaon, Maharashtra</option>
+						<option>Jalna, Maharashtra</option>
+						<option>Kolhapur, Maharashtra</option>
+						<option>Latur, Maharashtra</option>
+						<option>Mumbai, Maharashtra</option>
+						<option>Nagpur, Maharashtra</option>
+						<option>Nanded, Maharashtra</option>
+						<option>Nandurbar, Maharashtra</option>
+						<option>Nashik, Maharashtra</option>
+						<option>Osmanabad, Maharashtra</option>
+						<option>Parbhani, Maharashtra</option>
+						<option>Pune, Maharashtra</option>
+						<option>Raigarh, Maharashtra</option>
+						<option>Ratnagiri, Maharashtra</option>
+						<option>Sangli, Maharashtra</option>
+						<option>Satara, Maharashtra</option>
+						<option>Sindhudurg, Maharashtra</option>
+						<option>Solapur, Maharashtra</option>
+						<option>Thane, Maharashtra</option>
+						<option>Wardha, Maharashtra</option>
+						<option>Washim, Maharashtra</option>
+						<option>Yavatmal, Maharashtra</option>
+						<option>Bishnupur, Manipur</option>
+						<option>Chandel, Manipur</option>
+						<option>Churachandpur, Manipur</option>
+						<option>Imphal East, Manipur</option>
+						<option>Imphal West, Manipur</option>
+						<option>Senapati, Manipur</option>
+						<option>Tamenglong, Manipur</option>
+						<option>Thoubal, Manipur</option>
+						<option>Ukhrul, Manipur</option>
+						<option>East Garo Hills, Meghalaya</option>
+						<option>East Khasi Hills, Meghalaya</option>
+						<option>Jaintia Hills, Meghalaya</option>
+						<option>Ri Bhoi, Meghalaya</option>
+						<option>South Garo Hills, Meghalaya</option>
+						<option>West Garo Hills, Meghalaya</option>
+						<option>West Khasi Hills, Meghalaya</option>
+						<option>Aizawl, Mizoram</option>
+						<option>Champhai, Mizoram</option>
+						<option>Kolasib, Mizoram</option>
+						<option>Lawngtlai, Mizoram</option>
+						<option>Lunglei, Mizoram</option>
+						<option>Mammit, Mizoram</option>
+						<option>Saiha, Mizoram</option>
+						<option>Serchhip, Mizoram</option>
+						<option>Dimapur, Nagaland</option>
+						<option>Kiphire, Nagaland</option>
+						<option>Kohima, Nagaland</option>
+						<option>Longleng, Nagaland</option>
+						<option>Mokokchung, Nagaland</option>
+						<option>Mon, Nagaland</option>
+						<option>Peren, Nagaland</option>
+						<option>Phek, Nagaland</option>
+						<option>Tuensang, Nagaland</option>
+						<option>Wokha, Nagaland</option>
+						<option>Zunhebotto, Nagaland</option>
+						<option>Angul, Odisha</option>
+						<option>Balangir, Odisha</option>
+						<option>Baleswar, Odisha</option>
+						<option>Bargarh, Odisha</option>
+						<option>Bhadrak, Odisha</option>
+						<option>Boudh, Odisha</option>
+						<option>Cuttack, Odisha</option>
+						<option>Debagarh, Odisha</option>
+						<option>Dhenkanal, Odisha</option>
+						<option>Gajapati, Odisha</option>
+						<option>Ganjam, Odisha</option>
+						<option>Jagatsinghapur, Odisha</option>
+						<option>Jajapur, Odisha</option>
+						<option>Jharsuguda, Odisha</option>
+						<option>Kalahandi, Odisha</option>
+						<option>Kandhamal, Odisha</option>
+						<option>Kendrapara, Odisha</option>
+						<option>Kendujhar, Odisha</option>
+						<option>Khorda, Odisha</option>
+						<option>Koraput, Odisha</option>
+						<option>Malkangiri, Odisha</option>
+						<option>Mayurbhanj, Odisha</option>
+						<option>Nabarangapur, Odisha</option>
+						<option>Nayagarh, Odisha</option>
+						<option>Nuapada, Odisha</option>
+						<option>Puri, Odisha</option>
+						<option>Rayagada, Odisha</option>
+						<option>Sambalpur, Odisha</option>
+						<option>Sonapur, Odisha</option>
+						<option>Sundergar, Odisha</option>
+						<option>Karaikal, Pondicherry</option>
+						<option>Mahe, Pondicherry</option>
+						<option>Pondicherry, Pondicherry</option>
+						<option>Amritsar, Punjab</option>
+						<option>Barnala, Punjab</option>
+						<option>Bathinda, Punjab</option>
+						<option>Faridkot, Punjab</option>
+						<option>Fatehgarh Sahib, Punjab</option>
+						<option>Fazilka, Punjab</option>
+						<option>Firozpur, Punjab</option>
+						<option>Gurdaspur, Punjab</option>
+						<option>Hoshiarpur, Punjab</option>
+						<option>Jalandhar, Punjab</option>
+						<option>Kapurthala, Punjab</option>
+						<option>Ludhiana, Punjab</option>
+						<option>Mansa, Punjab</option>
+						<option>Moga, Punjab</option>
+						<option>Mohali, Punjab</option>
+						<option>Muktsar, Punjab</option>
+						<option>Nawanshahr, Punjab</option>
+						<option>Pathankot, Punjab</option>
+						<option>Patiala, Punjab</option>
+						<option>Ropar, Punjab</option>
+						<option>Rupnagar, Punjab</option>
+						<option>Sangrur, Punjab</option>
+						<option>Tarn Taran, Punjab</option>
+						<option>Ajmer, Rajasthan</option>
+						<option>Alwar, Rajasthan</option>
+						<option>Banswara, Rajasthan</option>
+						<option>Baran, Rajasthan</option>
+						<option>Barmer, Rajasthan</option>
+						<option>Bharatpur, Rajasthan</option>
+						<option>Bhilwara, Rajasthan</option>
+						<option>Bikaner, Rajasthan</option>
+						<option>Bundi, Rajasthan</option>
+						<option>Chittorgarh, Rajasthan</option>
+						<option>Churu, Rajasthan</option>
+						<option>Dausa, Rajasthan</option>
+						<option>Dholpur, Rajasthan</option>
+						<option>Dungarpur, Rajasthan</option>
+						<option>Ganganagar, Rajasthan</option>
+						<option>Hanumangarh, Rajasthan</option>
+						<option>Jaipur, Rajasthan</option>
+						<option>Jaisalmer, Rajasthan</option>
+						<option>Jalor, Rajasthan</option>
+						<option>Jhalawar, Rajasthan</option>
+						<option>Jhujhunu, Rajasthan</option>
+						<option>Jodhpur, Rajasthan</option>
+						<option>Karauli, Rajasthan</option>
+						<option>Kota, Rajasthan</option>
+						<option>Nagaur, Rajasthan</option>
+						<option>Pali, Rajasthan</option>
+						<option>Rajsamand, Rajasthan</option>
+						<option>Sawai Madhopur, Rajasthan</option>
+						<option>Sikar, Rajasthan</option>
+						<option>Sirohi, Rajasthan</option>
+						<option>Tonk, Rajasthan</option>
+						<option>Udaipur, Rajasthan</option>
+						<option>East Sikkim, Sikkim</option>
+						<option>North Sikkim, Sikkim</option>
+						<option>South Sikkim, Sikkim</option>
+						<option>West Sikkim, Sikkim</option>
+						<option>Adilabad, Telangana</option>
+						<option>Hyderabad, Telangana</option>
+						<option>K.V.Rangareddy, Telangana</option>
+						<option>Karim Nagar, Telangana</option>
+						<option>Khammam, Telangana</option>
+						<option>Mahabub Nagar, Telangana</option>
+						<option>Medak, Telangana</option>
+						<option>Nalgonda, Telangana</option>
+						<option>Nizamabad, Telangana</option>
+						<option>Warangal, Telangana,</option>
+						<option>Dhalai, Tripura</option>
+						<option>North Tripura, Tripura</option>
+						<option>South Tripura, Tripura</option>
+						<option>West Tripura, Tripura</option>
+						<option>Agra, Uttar Pradesh</option>
+						<option>Aligarh, Uttar Pradesh</option>
+						<option>Allahabad, Uttar Pradesh</option>
+						<option>Ambedkar Nagar, Uttar Pradesh</option>
+						<option>Auraiya, Uttar Pradesh</option>
+						<option>Azamgarh, Uttar Pradesh</option>
+						<option>Bagpat, Uttar Pradesh</option>
+						<option>Bahraich, Uttar Pradesh</option>
+						<option>Ballia, Uttar Pradesh</option>
+						<option>Balrampur, Uttar Pradesh</option>
+						<option>Banda, Uttar Pradesh</option>
+						<option>Barabanki, Uttar Pradesh</option>
+						<option>Bareilly, Uttar Pradesh</option>
+						<option>Basti, Uttar Pradesh</option>
+						<option>Bijnor, Uttar Pradesh</option>
+						<option>Budaun, Uttar Pradesh</option>
+						<option>Bulandshahr, Uttar Pradesh</option>
+						<option>Chandauli, Uttar Pradesh</option>
+						<option>Chitrakoot, Uttar Pradesh</option>
+						<option>Deoria, Uttar Pradesh</option>
+						<option>Etah, Uttar Pradesh</option>
+						<option>Etawah, Uttar Pradesh</option>
+						<option>Faizabad, Uttar Pradesh</option>
+						<option>Farrukhabad, Uttar Pradesh</option>
+						<option>Fatehpur, Uttar Pradesh</option>
+						<option>Firozabad, Uttar Pradesh</option>
+						<option>Gautam Buddha Nagar</option>
+						<option>Ghaziabad, Uttar Pradesh</option>
+						<option>Ghazipur, Uttar Pradesh</option>
+						<option>Gonda, Uttar Pradesh</option>
+						<option>Gorakhpur, Uttar Pradesh</option>
+						<option>Hamirpur, Uttar Pradesh</option>
+						<option>Hardoi, Uttar Pradesh</option>
+						<option>Hathras, Uttar Pradesh</option>
+						<option>Jalaun, Uttar Pradesh</option>
+						<option>Jaunpur, Uttar Pradesh</option>
+						<option>Jhansi, Uttar Pradesh</option>
+						<option>Jyotiba Phule Nagar</option>
+						<option>Kannauj, Uttar Pradesh</option>
+						<option>Kanpur Dehat, Uttar Pradesh</option>
+						<option>Kanpur Nagar, Uttar Pradesh</option>
+						<option>Kaushambi, Uttar Pradesh</option>
+						<option>Kheri, Uttar Pradesh</option>
+						<option>Kushinagar, Uttar Pradesh</option>
+						<option>Lalitpur, Uttar Pradesh</option>
+						<option>Lucknow, Uttar Pradesh</option>
+						<option>Maharajganj, Uttar Pradesh</option>
+						<option>Mahoba, Uttar Pradesh</option>
+						<option>Mainpuri, Uttar Pradesh</option>
+						<option>Mathura, Uttar Pradesh</option>
+						<option>Mau, Uttar Pradesh</option>
+						<option>Meerut, Uttar Pradesh</option>
+						<option>Mirzapur, Uttar Pradesh</option>
+						<option>Moradabad, Uttar Pradesh</option>
+						<option>Muzaffarnagar, Uttar Pradesh</option>
+						<option>Pilibhit, Uttar Pradesh</option>
+						<option>Pratapgarh, Uttar Pradesh</option>
+						<option>Raebareli, Uttar Pradesh</option>
+						<option>Rampur, Uttar Pradesh</option>
+						<option>Saharanpur, Uttar Pradesh</option>
+						<option>Sant Kabir Nagar, Uttar Pradesh</option>
+						<option>Sant Ravidas Nagar, Uttar Pradesh</option>
+						<option>Shahjahanpur, Uttar Pradesh</option>
+						<option>Shrawasti, Uttar Pradesh</option>
+						<option>Siddharthnagar, Uttar Pradesh</option>
+						<option>Sitapur, Uttar Pradesh</option>
+						<option>Sonbhadra, Uttar Pradesh</option>
+						<option>Sultanpur, Uttar Pradesh</option>
+						<option>Unnao, Uttar Pradesh</option>
+						<option>Varanasi, Uttar Pradesh</option>
+						<option>Almora, Uttarakhand</option>
+						<option>Bageshwar, Uttarakhand</option>
+						<option>Chamoli, Uttarakhand</option>
+						<option>Champawat, Uttarakhand</option>
+						<option>Dehradun, Uttarakhand</option>
+						<option>Haridwar, Uttarakhand</option>
+						<option>Nainital, Uttarakhand</option>
+						<option>Pauri Garhwal, Uttarakhand</option>
+						<option>Pithoragarh, Uttarakhand</option>
+						<option>Rudraprayag, Uttarakhand</option>
+						<option>Tehri Garhwal, Uttarakhand</option>
+						<option>Udham Singh Nagar, Uttarakhand</option>
+						<option>Uttarkashi, Uttarakhand</option>
+						<option>Bankura, West Bengal</option>
+						<option>Bardhaman, West Bengal</option>
+						<option>Birbhum, West Bengal</option>
+						<option>Cooch Behar, West Bengal</option>
+						<option>Darjiling, West Bengal</option>
+						<option>East Midnapore, West Bengal</option>
+						<option>Hooghly, West Bengal</option>
+						<option>Howrah, West Bengal</option>
+						<option>Jalpaiguri, West Bengal</option>
+						<option>Kolkata, West Bengal</option>
+						<option>Malda, West Bengal</option>
+						<option>Medinipur, West Bengal</option>
+						<option>Murshidabad, West Bengal</option>
+						<option>Nadia, West Bengal</option>
+						<option>North 24 Parganas, West Bengal</option>
+						<option>North Dinajpur, West Bengal</option>
+						<option>Puruliya, West Bengal</option>
+						<option>South 24 Parganas, West Bengal</option>
+						<option>South Dinajpur, West Bengal</option>
+						<option>West Midnapore, West Bengal</option>
+					</select>
+					<div class="form-text d-none">Company location is mandatory</div>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="jobStartYear">Start year <strong>*</strong></label>
+					<select id="jobStartYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+				</div>
+				<div class="col-lg-6 mt-4 form-group">
+					<label for="jobEndYear">End year <strong>*</strong></label>
+					<select id="jobEndYear" class="form-select">
+						<option>2022</option>
+						<option>2021</option>
+						<option>2020</option>
+						<option>2019</option>
+						<option>2018</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+						<option>2014</option>
+						<option>2013</option>
+						<option>2012</option>
+						<option>2011</option>
+						<option>2010</option>
+						<option>2009</option>
+						<option>2008</option>
+						<option>2007</option>
+						<option>2006</option>
+						<option>2005</option>
+						<option>2004</option>
+						<option>2003</option>
+						<option>2002</option>
+						<option>2001</option>
+						<option>2000</option>
+						<option>1999</option>
+						<option>1998</option>
+						<option>1997</option>
+						<option>1996</option>
+						<option>1995</option>
+						<option>1994</option>
+						<option>1993</option>
+						<option>1992</option>
+						<option>1991</option>
+						<option>1990</option>
+						<option>1989</option>
+						<option>1988</option>
+						<option>1987</option>
+						<option>1986</option>
+						<option>1985</option>
+						<option>1984</option>
+						<option>1983</option>
+						<option>1982</option>
+						<option>1981</option>
+						<option>1980</option>
+						<option>1979</option>
+						<option>1978</option>
+						<option>1977</option>
+						<option>1976</option>
+						<option>1975</option>
+						<option>1974</option>
+						<option>1973</option>
+						<option>1972</option>
+						<option>1971</option>
+						<option>1970</option>
+					</select>
+					<div class="form-text d-none">
+						End year can'tbe earlier than start
+					</div>
+				</div>
+				<div class="col-lg-12 mt-4 form-group">
+					<label for="jobDescription">Description <strong>*</strong></label>
+					<textarea
+						rows="4"
+						class="form-control"
+						id="jobDescription"
+						placeholder="Must not exceed 200 characters"
+					></textarea>
+					<div class="form-text d-none">End year is mandatory</div>
+				</div>
+				<div class="col-md-12 mt-4 form-group">
+					<button type="button" id="btn5Prev" class="btn-red">
+						<i class="bi bi-arrow-left"></i> Prev
+					</button>
+					<button type="button" id="btn5Next" class="btn-red">
+						Next <i class="bi bi-arrow-right"></i>
+					</button>
+				</div>
+			</form>
+		</section>
+
+		<section id="create-resume6" class="d-none">
+			<form class="row">
+				<div class="col-lg-12 mt-2 form-group education-heading">
+					<h6>
+						<strong>Your Interests</strong>
+					</h6>
+				</div>
+				<div class="form-group mt-4 col-lg-12">
+					<select id="interest" class="form-select">
+						<option value="" selected disabled>Select your interest</option>
+						<option>Playing a musical instrument</option>
+						<option>Podcasting</option>
+						<option>Chess</option>
+						<option>Reading</option>
+						<option>Writing</option>
+						<option>Sketching</option>
+						<option>Photography</option>
+						<option>Design</option>
+						<option>Blog writing</option>
+						<option>Painting</option>
+						<option>Basketball</option>
+						<option>Football</option>
+						<option>Volleyball</option>
+						<option>Marathon running</option>
+						<option>Skiing</option>
+						<option>Tennis</option>
+						<option>Cycling</option>
+						<option>Swimming</option>
+						<option>Baseball</option>
+						<option>Mountain climbing</option>
+						<option>Boardgames</option>
+						<option>Creating and organizing a book club</option>
+						<option>Networking events</option>
+						<option>Local meetups</option>
+						<option>Volunteering at a charity center</option>
+						<option>Public speaking</option>
+						<option>Exploring other cultures</option>
+						<option>Gaming</option>
+						<option>Dancing</option>
+						<option>Camping</option>
+						<option>Language classes</option>
+						<option>Archery</option>
+						<option>Gardening</option>
+						<option>Stand-up comedy</option>
+						<option>Baking</option>
+						<option>Journaling</option>
+						<option>Calligraphy</option>
+						<option>Fencing</option>
+						<option>Theater</option>
+						<option>Yoga</option>
+						<option>Trekking</option>
+					</select>
+				</div>
+				<div class="interest-data mt-3"></div>
+				<div class="col-md-12 mt-4 form-group">
+					<button type="button" id="btn6Prev" class="btn-red">
+						<i class="bi bi-arrow-left"></i> Prev
+					</button>
+					<button type="button" id="btn6Next" class="btn-red">
+						Next <i class="bi bi-arrow-right"></i>
+					</button>
+				</div>
+			</form>
+		</section>
+
+		<section id="create-resume7" class="d-none">
+			<div class="col-lg-12 mt-3 mb-4 form-group education-heading">
+				<h6>
+					<strong>Your Profile</strong>
+				</h6>
+			</div>
+			<input type="file" id="profileImage" accept="image/*" class="d-none" />
+			<div class="upload-box">
+				<img src="./resources/images/upload.png" class="upload-img" alt="" />
+				<p class="mt-3">Upload Here</p>
+			</div>
+			<div class="preview-box d-none">
+				<img src="" class="previewImg" alt="" />
+			</div>
+			<div class="image-discard mt-4">
+				<button id="discard-img" class="d-none btn-outline">
+					<i class="bi bi-x-circle"></i> Discard
+				</button>
+			</div>
+			<div class="mt-4 form-group">
+				<button type="button" id="btn7Prev" class="btn-red">
+					<i class="bi bi-arrow-left"></i> Prev
+				</button>
+				<button type="button" id="btn7Next" class="btn-red">
+					Save & Continue <i class="bi bi-arrow-right"></i>
+				</button>
+			</div>
+		</section>
+	</body>
+</html>

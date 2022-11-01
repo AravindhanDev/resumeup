@@ -1,0 +1,238 @@
+body {
+	display: grid;
+	place-items: center;
+}
+
+form {
+	padding: 1.5rem;
+}
+
+div.row {
+	padding: 0 1.5rem 1.5rem;
+}
+
+#create-resume2 {
+	width: 55rem;
+	background: #fff;
+	border: 2px dashed #ccc;
+}
+
+#create-resume1,
+#create-resume3,
+#create-resume5 {
+	width: 50rem;
+	background: #fff;
+	border: 2px dashed #ccc;
+}
+
+#create-resume4,
+#create-resume6 {
+	width: 40rem;
+	background: #fff;
+	border: 2px dashed #ccc;
+}
+
+#create-resume6 {
+	width: 30rem;
+	background: #fff;
+	border: 2px dashed #ccc;
+}
+
+#create-resume7 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40rem;
+	height: 28rem;
+	background: #fff;
+	border: 2px dashed #ccc;
+}
+
+.file-display {
+	font-size: 1.06rem;
+}
+
+.education-heading {
+	text-align: center;
+}
+
+.education-heading h6 {
+	background: rgba(255, 74, 74, 0.2);
+	padding: 0.4rem 1rem;
+	width: 100%;
+	display: inline;
+	border-radius: 2px;
+	border: 1px dashed var(--secondary-color);
+	color: var(--secondary-color);
+}
+
+@media (max-width: 720px) {
+	#create-resume1,
+	#create-resume2,
+	#create-resume3,
+	#create-resume4,
+	#create-resume5,
+	#create-resume6 {
+		width: 100% !important;
+	}
+	.form-group:nth-child(2) {
+		margin-top: 1.2rem;
+	}
+	#create-resume7 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.form-group:nth-child(2) {
+		margin-top: 1.2rem;
+	}
+	#create-resume3 {
+		min-width: 100% !important;
+	}
+}
+
+.projectData {
+	padding: 0 1.5rem;
+}
+
+@media (max-width: 500px) {
+	.projectData .project {
+		font-size: 0.9rem !important;
+	}
+}
+
+.project {
+	height: 3rem !important;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.1rem;
+	cursor: pointer;
+	border: 2px dashed transparent;
+	padding: 0 0.6rem;
+	align-items: center;
+}
+
+.project:hover {
+	border: 2px dashed #ccc;
+	box-shadow: 3px 3px 10px rgba(238, 238, 238, 0.6),
+		-3px -3px 10px rgba(34, 34, 34, 0.1);
+}
+
+.project div:last-child {
+	color: var(--secondary-color);
+	cursor: pointer;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	display: grid;
+	place-items: center;
+}
+
+.project div:last-child:hover {
+	background: rgba(255, 74, 74, 0.2);
+}
+
+.skill,
+.expertise,
+.interest {
+	padding: 0.3rem 0.6rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	border: 2px dashed transparent;
+}
+
+.skill:hover,
+.expertise:hover,
+.interest:hover {
+	border: 2px dashed #ccc;
+	box-shadow: 3px 3px 10px rgba(238, 238, 238, 0.6),
+		-3px -3px 10px rgba(34, 34, 34, 0.1);
+}
+
+.skill-delete,
+.interest-delete,
+.expertise-delete {
+	color: var(--secondary-color);
+	cursor: pointer;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	display: grid;
+	place-items: center;
+}
+
+.skill-delete:hover,
+.interest-delete:hover,
+.expertise-delete:hover {
+	background: rgba(255, 74, 74, 0.3);
+}
+
+.form-group label:first-child {
+	font-size: 1.1rem;
+}
+
+.upload-box {
+	width: 13rem;
+	height: 13rem;
+	padding: 3rem;
+	border: 3px dashed #bbb;
+	border-radius: 50%;
+	cursor: pointer;
+	text-align: center;
+}
+
+.upload-box p {
+	font-weight: bold;
+}
+
+.upload-box:hover {
+	background: #f8f8f8;
+}
+
+.upload-img {
+	width: 100%;
+}
+
+.file-display {
+	width: 16.5rem;
+	display: flex;
+	justify-content: space-between;
+	border: 2px dashed #bbb;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.file-display:hover {
+	background: #f4f4f4;
+}
+
+.skip {
+	color: var(--secondary-color);
+	font-weight: 600;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.file-discard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.preview-box {
+	border-radius: 50%;
+	background: rgba(255, 74, 74, 0.3);
+	box-shadow: 3px 3px 10px rgba(238, 238, 238, 0.6),
+		-3px -3px 10px rgba(34, 34, 34, 0.1);
+}
+
+.previewImg {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	padding: 0.4rem;
+}

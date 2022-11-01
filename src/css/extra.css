@@ -1,0 +1,88 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #f9f9f9;
+	--secondary-color: #ff4a4a;
+	--secondary-opac-color: rgba(255, 74, 74, 0.8);
+	--secondary-border: #e64848;
+	--secondary-hover-color: rgba(255, 74, 74, 0.2);
+}
+
+label {
+	font-weight: bold;
+}
+
+body {
+	background: var(--primary-color);
+	font-family: "Josefin Sans", sans-serif;
+	padding: 1rem;
+	user-select: none;
+}
+
+.form-text {
+	color: var(--secondary-color);
+}
+
+label strong {
+	color: var(--secondary-color);
+	font-size: 1.1rem;
+}
+
+ul,
+ol {
+	padding: 0 1rem;
+}
+
+.btn-outline {
+	padding: 0.4rem 1.5rem;
+	border: none !important;
+	background: var(--secondary-hover-color);
+	color: var(--secondary-color);
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+.btn-red {
+	border: 0;
+	color: #fff;
+	font-weight: 700;
+	transition: all 0.2s;
+	background: var(--secondary-color);
+	padding: 0.3rem 1rem;
+	border-radius: 3px;
+	border-left: 5px solid var(--secondary-border);
+	border-bottom: 5px solid var(--secondary-border);
+	box-shadow: 2px 2px 8px #aaa;
+}
+
+.btn-red:active {
+	border-left: 2px solid var(--secondary-border);
+	border-bottom: 2px solid var(--secondary-border);
+	box-shadow: 10px 10px 15px transparent;
+}
+
+.form-control,
+.form-select {
+	box-shadow: none !important;
+	border: 1px solid #aaa;
+}
+
+.form-control:focus,
+.form-select:focus {
+	border: 1px solid #aaa;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
